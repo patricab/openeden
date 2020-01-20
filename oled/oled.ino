@@ -7,7 +7,6 @@ int state = 0;
 Adafruit_SSD1306 display(-1);
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(9, INPUT_PULLUP);
   Wire.begin();
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -18,7 +17,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly: 
   if (digitalRead(9) == LOW) {
     state = !state;
     delay(100);
